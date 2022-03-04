@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem name="Formation" id="formation_base_menu"/>
+    <menuitem name="Mentoree" id="per_mentoree_menu" parent="formation_base_menu" action="action_all_mentoree"/>
+    <menuitem name="Mentoree's subjects" id="mentoree_subject_menu" parent="formation_base_menu" action="mentoree_subject_action"/>
+
+    <!-- settings -->
+    <menuitem name="Settings" id="formation_settings_menu" parent="formation_base_menu"/>
+
+    <!-- PER menu-->
+    <menuitem name="Base" id="base_menu" parent="base_menu"/>
+    <menuitem name="Formation" id="formation_menu" parent="base_menu" action="formation_action"/>
+    <menuitem name="Formation's subject" id="formation_subject_menu" parent="base_menu" action="formation_subject_action"/>
+    <menuitem name="Note Template" id="mentoree_subject_note_template_menu" parent="base_menu" action="mentoree_subject_note_template_action"/>
+
+</odoo>
+

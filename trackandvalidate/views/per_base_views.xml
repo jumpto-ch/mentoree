@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id='formation_action' model='ir.actions.act_window'>
+        <field name="name">Formation</field>
+        <field name="res_model">formation</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id='formation_subject_action' model='ir.actions.act_window'>
+        <field name="name">Formation's subject</field>
+        <field name="res_model">formation.subject</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="formation_subject_view_form" model="ir.ui.view">
+        <field name="name">Formation's subject form view</field>
+        <field name="model">formation.subject</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>
+                        <field name="formation_id"/>
+                    </h1>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="formation_view_tree" model="ir.ui.view">
+        <field name="name">Formation list</field>
+        <field name="model">formation</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="formation_view_form" model="ir.ui.view">
+        <field name="name">Formation form</field>
+        <field name="model"></field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>
+                        <field name="description"/>
+                    </h1>
+                    <notebook>
+                        <page string="Subjects">
+                            <field name="formation_subject_ids">
+                                <tree>
+                                    <field name="description"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="formation_view_search" model="ir.ui.view">
+        <field name="name">Formation search</field>
+        <field name="model">formation</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="description"/>
+            </search>
+        </field>
+    </record>
+</odoo>

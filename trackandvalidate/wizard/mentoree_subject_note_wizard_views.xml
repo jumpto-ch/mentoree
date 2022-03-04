@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mentoree_subject_note_view_wizard_form" model="ir.ui.view">
+        <field name="name">Mentoree's subject note wizard</field>
+        <field name="model">mentoree.subject.note.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Add new note">
+                <sheet>
+                    <group>
+                        <field name="note_template" options="{'no_create': True}"/>
+                        <field name="note"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button string='Add' type='object'
+                            name='add_note'
+                            class='btn-primary'/>
+                    <button string='Add and valid' type='object'
+                            name='valid_goal'
+                            class='btn-primary'/>
+                    <button string='Cancel' class='btn-default' special='cancel'/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
+

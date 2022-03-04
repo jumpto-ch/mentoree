@@ -1,0 +1,5 @@
+<odoo>
+    <record id="per_job_mentor" model="hr.job">
+        <field name="name">Mentor</field>
+    </record>
+</odoo>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="group_mentoree" model="res.groups">
+        <field name="name">Mentoree</field>
+        <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+    </record>
+
+    <record id="group_mentor" model="res.groups">
+        <field name="name">Mentor</field>
+        <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+        <field name="implied_ids" eval="[(4, ref('trackandvalidate.group_mentoree'))]"/>
+    </record>
+
+    <record id="group_director" model="res.groups">
+        <field name="name">Director</field>
+        <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+        <field name="implied_ids" eval="[(4, ref('trackandvalidate.group_mentor'))]"/>
+    </record>
+</odoo>

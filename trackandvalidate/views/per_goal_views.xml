@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id='mentoree_subject_action' model='ir.actions.act_window'>
+        <field name="name">Mentoree's subject</field>
+        <field name="res_model">mentoree.subject</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{
+            'search_default_state_filter': True,
+            'search_default_nottodo_filter': True
+            }
+        </field>
+    </record>
+
+    <record id='mentoree_2_mentoree_subject_action' model='ir.actions.act_window'>
+        <field name="name">Chosen mentoree's subject</field>
+        <field name="res_model">mentoree.subject</field>
+        <field name="view_mode">tree,form</field>
+        <!--TODO search_default_student_id leave 2 filter, it's not on purpose-->
+         <field name="context">{
+             'search_default_mentoree_id': active_id,
+             'search_default_nottodo_filter': True,
+             'search_default_formation_filter': True,
+             }</field>
+
+    </record>
+
+    <record id="mentoree_subject_view_tree" model="ir.ui.view">
+        <field name="name">Mentoree's subject list</field>
+        <field name="model">mentoree.subject</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="formation_subject_description"/>
+                <field name="mentoree_id"/>
+                <field name="state"/>
+                <field name="achieve_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="mentoree_subject_view_form" model="ir.ui.view">
+        <field name="name">Mentoree's subject form</field>
+        <field name="model">mentoree.subject</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button string="Add a note" class="btn-primary" name="action_add_note" type="object"/>
+                    <button string="Cancel" name="invalid_mentoree_subject" type="object"
+                            attrs="{'invisible': [('state', '!=', 'done')]}"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <widget name="web_ribbon" text="Success" attrs="{'invisible': [('state', '!=', 'done')]}"/>
+                    <h1>
+                        <field name="formation_id" widget="html"/>
+                        <br/>
+                        <field name="formation_description"/>
+                    </h1>
+                    <h2>
+                        <field name="formation_subject_description" widget="html"/>
+                    </h2>
+                    <group>
+                        <group>
+                            <field name="formation_subject_id" invisible="1"/>
+                            <field name="formation_id" invisible="1"/>
+                            <field name="mentoree_id"/>
+                        </group>
+                        <group>
+                            <field name="achieve_date"/>
+                        </group>
+                    </group>
+                    <field name="notes_ids">
+                        <tree create="false" editable="top">
+                            <field name="valid_goal"/>
+                            <field name="date"/>
+                            <field name="note"/>
+                            <field name="author_id"/>
+                        </tree>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="mentoree_subject_view_search" model="ir.ui.view">
+        <field name="model">mentoree.subject</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" filter_domain="['|', ('name','ilike',self), ('formation_subject_description','ilike',self)]"/>
+                <field name="formation_subject_description"/>
+                <field name="mentoree_id"/>
+                <group string="Group By">
+                    <filter string="Mentoree" name="mentoree_filter"
+                            context="{'group_by':'mentoree_id'}"/>
+                    <filter string="State" name="state_filter"
+                            context="{'group_by':'state'}"/>
+                    <filter string="Formation" name="formation_filter"
+                            context="{'group_by':'formation_id'}"/>
+                </group>
+                <group>
+                    <filter string="Success" name="achieved_filter" domain="[('state', '=', 'done')]"/>
+                    <filter string="Active" name="nottodo_filter" domain="[('state', '=', 'progress')]"/>
+                    <filter string="To do" name="todo_filter" domain="[('state', '=', 'to_do')]"/>
+                </group>
+            </search>
+        </field>
+    </record>
+</odoo>
