@@ -3,7 +3,7 @@ import re
 from odoo import models, fields, api
 
 
-class PerGoal(models.Model):
+class MentoreeSubject(models.Model):
     _name = 'mentoree.subject'
     _description = 'subject assign to a mentoree'
 
@@ -11,14 +11,11 @@ class PerGoal(models.Model):
     is_achieve = fields.Boolean("Achieve", compute="_compute_is_achieve", store=True)
     mentoree_id = fields.Many2one('res.partner')
     achieve_date = fields.Date("Date", default=False)
-    notes_ids = fields.One2many('mentoree.subject.note', 'mentoree.subject', string='note')
+    notes_ids = fields.One2many('mentoree.subject.note', inverse_name='mentoree_subject_id', string='note')
     formation_subject_id = fields.Many2one('formation.subject')
 
-    formation_id = fields.Many2one(related='formation_subject_id.formation_id', store=True)
-    formation_subject_description = fields.Char(string='formation\'s subject description',
+    formation_subject_name = fields.Char(string='formation\'s subject name',
                                                 related='formation_subject_id.name', readonly=True, store=True)
-    formation_description = fields.Char(string='formation\'s description',
-                                        related='formation_id.description', readonly=True, store=True)
     state = fields.Selection([
         ('to_do', 'To Do'),
         ('progress', 'In Progress'),

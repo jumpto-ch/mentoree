@@ -3,6 +3,7 @@ access_admin_formation_subject,access_per_domain,model_formation_subject,base.gr
 access_admin_formation,access_per_domain,model_formation,base.group_erp_manager,1,1,1,1
 ,,,,,,,
 access_director_formation_subject,access_formation_subject,model_formation_subject,trackandvalidate.group_director,1,1,1,1
+access_director_mentoree_subject,access_mentoree_subject,model_mentoree_subject,trackandvalidate.group_director,1,1,1,1
 access_director_mentoree_subject_note,access_mentoree_subject_note,model_mentoree_subject_note,trackandvalidate.group_director,1,1,1,1
 access_director_mentoree_subject_note_template,access_mentoree_subject_note_template,model_mentoree_subject_note_template,trackandvalidate.group_director,1,1,1,1
 ,,,,,,,

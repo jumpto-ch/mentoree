@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id='formation_subject_action' model='ir.actions.act_window'>
+        <field name="name">Formation's subject</field>
+        <field name="res_model">formation.subject</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
     <record id='formation_action' model='ir.actions.act_window'>
         <field name="name">Formation</field>
         <field name="res_model">formation</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-    <record id='formation_subject_action' model='ir.actions.act_window'>
-        <field name="name">Formation's subject</field>
-        <field name="res_model">formation.subject</field>
+    <record id='formation_tag_action' model='ir.actions.act_window'>
+        <field name="name">Formation's tag</field>
+        <field name="res_model">formation.tag</field>
         <field name="view_mode">tree,form</field>
     </record>
 
@@ -19,10 +25,10 @@
             <form>
                 <sheet>
                     <h1>
-                        <field name="formation_id"/>
+                        <field name="name"/>
                     </h1>
                     <group>
-                        <field name="name"/>
+                        <field name="formation_ids"/>
                     </group>
                 </sheet>
             </form>
@@ -35,25 +41,47 @@
         <field name="model">formation</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="description"/>
+                <field name="name"/>
             </tree>
         </field>
     </record>
 
     <record id="formation_view_form" model="ir.ui.view">
         <field name="name">Formation form</field>
-        <field name="model"></field>
+        <field name="model">formation</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>
                     <h1>
-                        <field name="description"/>
+                        <field name="name"/>
                     </h1>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <group string="Information">
+                      <group>
+                        <field name="formation_tag_ids"/>
+                      </group>
+                    </group>
                     <notebook>
-                        <page string="Subjects">
+                        <page string="Formation subject">
                             <field name="formation_subject_ids">
                                 <tree>
-                                    <field name="description"/>
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Included formation">
+                            <field name="formation_child_ids">
+                                <tree>
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Parent's formation">
+                            <field name="formation_parent_ids">
+                                <tree>
+                                    <field name="name"/>
                                 </tree>
                             </field>
                         </page>
@@ -68,7 +96,8 @@
         <field name="model">formation</field>
         <field name="arch" type="xml">
             <search>
-                <field name="description"/>
+                <field name="name"/>
+                <field name="formation_tag_ids"/>
             </search>
         </field>
     </record>

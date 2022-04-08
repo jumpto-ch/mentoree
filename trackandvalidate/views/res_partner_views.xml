@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id='action_all_student' model='ir.actions.act_window'>
-        <field name="name">All Student</field>
+    <record id='action_all_mentoree' model='ir.actions.act_window'>
+        <field name="name">All Mentoree</field>
         <field name="res_model">res.partner</field>
         <field name="view_mode">kanban,tree,form</field>
-        <field name="domain">[('is_student', '=', True)]</field>
-        <field name="context">{'default_is_student': True}</field>
+        <field name="domain">[('is_mentoree', '=', True)]</field>
+        <field name="context">{'default_is_mentoree': True}</field>
         <field name="limit">30</field>
         <field name="target">current</field>
     </record>

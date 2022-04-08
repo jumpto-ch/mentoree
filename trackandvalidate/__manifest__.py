@@ -5,7 +5,7 @@
 
     'summary': """
         This modules aim to define formations and subjects of formation that mentoree have to learn.
-        Subject have to be validate by mentor for """,
+        Subject have to be validate by mentor for formation to be complete """,
 
     'author': "JumpTo",
     'website': "http://jumpto.ch",
@@ -24,12 +24,13 @@
         'security/groups.xml',
         'security/ir.model.access.csv',
         'data/ir_action_server.xml',
-        'data/per_base.xml',
-        'views/per_goal_views.xml',
-        'views/per_goals_note_views.xml',
-        'views/per_base_views.xml',
+        'data/base.xml',
+        'views/mentoree_subject_views.xml',
+        'views/mentoree_subject_note_views.xml',
+        'views/formation_base_views.xml',
         'views/res_partner_views.xml',
-        'wizard/per_goal_note_wizard_view.xml',
-        'views/per_menu.xml',
+        'wizard/mentoree_subject_edit_wizard_views.xml',
+        'wizard/mentoree_subject_note_wizard_views.xml',
+        'views/menu.xml',
     ],
 }
