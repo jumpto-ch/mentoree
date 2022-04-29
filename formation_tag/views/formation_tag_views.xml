@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id='formation_tag_action' model='ir.actions.act_window'>
+        <field name="name">Formation's tag</field>
+        <field name="res_model">formation.tag</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="tag_formation_view_form" model="ir.ui.view">
+        <field name="name">Formation form</field>
+        <field name="model">formation</field>
+        <field name="inherit_id" ref="base_formation.formation_view_form"/>
+        <field name="arch" type="xml">
+            <notebook position="before">
+                <group string="Information">
+                  <group>
+                    <field name="formation_tag_ids"/>
+                  </group>
+                </group>
+            </notebook>
+        </field>
+    </record>
+
+    <record id="formation_view_search" model="ir.ui.view">
+        <field name="name">Formation search</field>
+        <field name="model">formation</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" position="after">
+                    <field name="formation_tag_ids"/>
+                </field>
+            </search>
+        </field>
+    </record>
+</odoo>

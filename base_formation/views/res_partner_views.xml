@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id='action_all_mentoree' model='ir.actions.act_window'>
-        <field name="name">All Mentoree</field>
+    <record id='action_all_trainee' model='ir.actions.act_window'>
+        <field name="name">All trainee</field>
         <field name="res_model">res.partner</field>
         <field name="view_mode">kanban,tree,form</field>
-        <field name="domain">[('is_mentoree', '=', True)]</field>
-        <field name="context">{'default_is_mentoree': True}</field>
+        <field name="domain">[('is_trainee', '=', True)]</field>
+        <field name="context">{'default_is_trainee': True}</field>
         <field name="limit">30</field>
         <field name="target">current</field>
     </record>
@@ -16,7 +16,7 @@
         <field name="inherit_id" ref="base.view_res_partner_filter"/>
         <field name="arch" type="xml">
             <filter name="type_person" position="before">
-                <filter string="Mentoree" name="is_mentoree_filter" domain="[('is_mentoree', '=', True)]"/>
+                <filter string="trainee" name="is_trainee_filter" domain="[('is_trainee', '=', True)]"/>
                 <separator/>
             </filter>
         </field>

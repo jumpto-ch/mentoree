@@ -3,17 +3,17 @@
     <record id="action_server_add_note" model="ir.actions.server">
         <field name="name">add a note</field>
         <field name="state">code</field>
-        <field name="model_id" ref="model_mentoree_subject"/>
-        <field name="binding_model_id" ref="model_mentoree_subject"/>
+        <field name="model_id" ref="model_setted_goal"/>
+        <field name="binding_model_id" ref="model_setted_goal"/>
         <field name="code">
             action = records.action_add_note()</field>
     </record>
-    <record id="action_server_mentoree_subject_edit" model="ir.actions.server">
-        <field name="name">Edit subject attribution</field>
+    <record id="action_server_setted_goal_edit" model="ir.actions.server">
+        <field name="name">Edit goal attribution</field>
         <field name="state">code</field>
         <field name="model_id" ref="model_res_partner"/>
         <field name="binding_model_id" ref="model_res_partner"/>
         <field name="code">
-            action = records.action_mentoree_subject_edit()</field>
+            action = records.action_setted_goal_edit()</field>
     </record>
 </odoo>

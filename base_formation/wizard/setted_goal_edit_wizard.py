@@ -2,20 +2,20 @@
 
 from odoo import models, fields
 
-class MentoreeSubjectEditWizard(models.TransientModel):
-    _name = 'mentoree.subject.edit.wizard'
-    _description = "Wizard to change list of subject of a mentoree"
+class SettedGoalEditWizard(models.TransientModel):
+    _name = 'setted.goal.edit.wizard'
+    _description = "Wizard to change list of subject of a trainee"
 
-    mentoree_ids = fields.Many2many('res.partner', 'mentoree_rel_editor', 'editor', 'partner', string='Mentoree')
-    formation_subject_ids = fields.Many2many('formation.subject', 'formation_subject_rel_editor', 'editor', 'formation_subject', string='Formation\'subject')
+    trainee_ids = fields.Many2many('res.partner', 'trainee_rel_editor', 'editor', 'partner', string='trainee')
+    subject_ids = fields.Many2many('formation.subject', 'subject_rel_editor', 'editor', 'subject', string='Subject')
 
-    def validate_mentoree_subject_edition(self):
-        for m in self.mentoree_ids:
-            for fsbj in self.formation_subject_ids:
-                self.env['mentoree.subject'].create({
-                    'name': fsbj.name,
-                    'formation_subject_id': fsbj.id,
-                    'mentoree_id': m.id
+    def validate_setted_goal_edition(self):
+        for trainee in self.trainee_ids:
+            for subject in self.subject_ids:
+                self.env['setted.goal'].create({
+                    'name': subject.name,
+                    'subject_id': subject.id,
+                    'trainee_id': trainee.id
                 })
 
 

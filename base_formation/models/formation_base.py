@@ -1,18 +1,11 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api, _
-import re
 
-class FormationTag(models.Model):
-    _name = 'formation.tag'
-    _description = 'tag that help filter formation'
 
-    name = fields.Char()
-    formation_ids = fields.Many2many('formation', 'formation_tag_rel', 'tag', 'formation', string='Formation')
-
-class FormationSubject(models.Model):
+class Subject(models.Model):
     _name = 'formation.subject'
-    _description = 'Subject formation'
+    _description = 'a subject is a achievable part of a formation'
 
     name = fields.Char()
     description = fields.Html()
@@ -20,13 +13,10 @@ class FormationSubject(models.Model):
 
 class Formation(models.Model):
     _name = 'formation'
-    _description = 'Formation that mentoree will study'
+    _description = 'Formation that trainer will teach to trainee'
 
     name = fields.Char()
-    formation_subject_ids = fields.Many2many('formation.subject', 'formation_subject_rel', 'formation', 'subject', string='Formation\'s subjects')
+    subject_ids = fields.Many2many('formation.subject', 'formation_subject_rel', 'formation', 'subject', string='Subjects')
 
-    formation_parent_ids = fields.Many2many('formation', 'formation_tree_rel', 'parent', 'child', string='List of parents')
-    formation_child_ids = fields.Many2many('formation', 'formation_tree_rel', 'child', 'parent', string='List of childs')
-
-    formation_tag_ids = fields.Many2many('formation.tag', 'formation_tag_rel', 'formation', 'tag', string='Tag')
-
+    parent_ids = fields.Many2many('formation', 'formation_tree_rel', 'parent', 'child', string='List of parents')
+    child_ids = fields.Many2many('formation', 'formation_tree_rel', 'child', 'parent', string='List of childs')

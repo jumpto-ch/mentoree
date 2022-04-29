@@ -3,20 +3,20 @@
 from odoo import models, fields, api
 
 
-class PerGoalNote(models.Model):
-    _name = 'mentoree.subject.note'
-    _description = 'Manage mentoree\'s subject note'
+class SettedGoalNote(models.Model):
+    _name = 'setted.goal.note'
+    _description = 'Manage trainee\'s subject note'
 
     author_id = fields.Many2one('hr.employee')
     date = fields.Date(default=fields.Date.today())
-    mentoree_subject_id = fields.Many2one('mentoree.subject')
+    setted_goal_id = fields.Many2one('setted.goal')
     valid_goal = fields.Boolean()
     note = fields.Text()
 
     @api.constrains('valid_goal')
     def _only_one_note_valid_goal(self):
         for note in self:
-            if self.search_count([('mentoree_subject_id', '=', note.mentoree_subject_id.id),
+            if self.search_count([('setted_goal_id', '=', note.setted_goal_id.id),
                                   ('valid_goal', '=', True)]) > 1:
                 raise models.ValidationError('Only one note can valid the goal')
 
