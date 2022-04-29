@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id='mentoree_subject_action' model='ir.actions.act_window'>
-        <field name="name">Mentoree's subject</field>
-        <field name="res_model">mentoree.subject</field>
+    <record id='setted_goal_action' model='ir.actions.act_window'>
+        <field name="name">Setted goal</field>
+        <field name="res_model">setted.goal</field>
         <field name="view_mode">tree,form</field>
         <field name="context">{
             'search_default_state_filter': True,
@@ -11,53 +11,52 @@
         </field>
     </record>
 
-    <record id='mentoree_2_mentoree_subject_action' model='ir.actions.act_window'>
-        <field name="name">Chosen mentoree's subject</field>
-        <field name="res_model">mentoree.subject</field>
+    <record id='trainee_2_setted_goal_action' model='ir.actions.act_window'>
+        <field name="name">Chosen trainee goals</field>
+        <field name="res_model">setted.goal</field>
         <field name="view_mode">tree,form</field>
-        <!--TODO search_default_student_id leave 2 filter, it's not on purpose-->
          <field name="context">{
-             'search_default_mentoree_id': active_id,
+             'search_default_trainee_id': active_id,
              'search_default_nottodo_filter': True,
              'search_default_formation_filter': True,
              }</field>
 
     </record>
 
-    <record id="mentoree_subject_view_tree" model="ir.ui.view">
-        <field name="name">Mentoree's subject list</field>
-        <field name="model">mentoree.subject</field>
+    <record id="setted_goal_view_tree" model="ir.ui.view">
+        <field name="name">Setted goal list</field>
+        <field name="model">setted.goal</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="formation_subject_name"/>
-                <field name="mentoree_id"/>
+                <field name="subject_name"/>
+                <field name="trainee_id"/>
                 <field name="state"/>
                 <field name="achieve_date"/>
             </tree>
         </field>
     </record>
 
-    <record id="mentoree_subject_view_form" model="ir.ui.view">
-        <field name="name">Mentoree's subject form</field>
-        <field name="model">mentoree.subject</field>
+    <record id="setted_goal_view_form" model="ir.ui.view">
+        <field name="name">Setted goal form</field>
+        <field name="model">setted.goal</field>
         <field name="arch" type="xml">
             <form>
                 <header>
                     <button string="Add a note" class="btn-primary" name="action_add_note" type="object"/>
-                    <button string="Cancel" name="invalid_mentoree_subject" type="object"
+                    <button string="Cancel" name="invalid_setted_goal" type="object"
                             attrs="{'invisible': [('state', '!=', 'done')]}"/>
                     <field name="state" widget="statusbar"/>
                 </header>
                 <sheet>
                     <widget name="web_ribbon" text="Success" attrs="{'invisible': [('state', '!=', 'done')]}"/>
                     <h1>
-                        <field name="formation_subject_name" widget="html"/>
+                        <field name="subject_name" widget="html"/>
                     </h1>
                     <group>
                         <group>
-                            <field name="formation_subject_id" invisible="1"/>
-                            <field name="mentoree_id"/>
+                            <field name="subject_id" invisible="1"/>
+                            <field name="trainee_id"/>
                         </group>
                         <group>
                             <field name="achieve_date"/>
@@ -76,16 +75,16 @@
         </field>
     </record>
 
-    <record id="mentoree_subject_view_search" model="ir.ui.view">
-        <field name="model">mentoree.subject</field>
+    <record id="setted_goal_view_search" model="ir.ui.view">
+        <field name="model">setted.goal</field>
         <field name="arch" type="xml">
             <search>
                 <field name="name" filter_domain="['|', ('name','ilike',self), ('formation_subject_name','ilike',self)]"/>
-                <field name="formation_subject_name"/>
-                <field name="mentoree_id"/>
+                <field name="subject_name"/>
+                <field name="trainee_id"/>
                 <group string="Group By">
-                    <filter string="Mentoree" name="mentoree_filter"
-                            context="{'group_by':'mentoree_id'}"/>
+                    <filter string="Trainee" name="trainee_filter"
+                            context="{'group_by':'trainee_id'}"/>
                     <filter string="State" name="state_filter"
                             context="{'group_by':'state'}"/>
                 </group>

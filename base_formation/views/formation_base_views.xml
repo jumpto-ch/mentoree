@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id='formation_subject_action' model='ir.actions.act_window'>
-        <field name="name">Formation's subject</field>
+    <record id='subject_action' model='ir.actions.act_window'>
+        <field name="name">Subject</field>
         <field name="res_model">formation.subject</field>
         <field name="view_mode">tree,form</field>
     </record>
@@ -12,14 +12,8 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <record id='formation_tag_action' model='ir.actions.act_window'>
-        <field name="name">Formation's tag</field>
-        <field name="res_model">formation.tag</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-
-    <record id="formation_subject_view_form" model="ir.ui.view">
-        <field name="name">Formation's subject form view</field>
+    <record id="subject_view_form" model="ir.ui.view">
+        <field name="name">Subject form view</field>
         <field name="model">formation.subject</field>
         <field name="arch" type="xml">
             <form>
@@ -55,31 +49,23 @@
                     <h1>
                         <field name="name"/>
                     </h1>
-                    <h1>
-                        <field name="name"/>
-                    </h1>
-                    <group string="Information">
-                      <group>
-                        <field name="formation_tag_ids"/>
-                      </group>
-                    </group>
                     <notebook>
-                        <page string="Formation subject">
-                            <field name="formation_subject_ids">
+                        <page string="Subject">
+                            <field name="subject_ids">
                                 <tree>
                                     <field name="name"/>
                                 </tree>
                             </field>
                         </page>
                         <page string="Included formation">
-                            <field name="formation_child_ids">
+                            <field name="child_ids">
                                 <tree>
                                     <field name="name"/>
                                 </tree>
                             </field>
                         </page>
                         <page string="Parent's formation">
-                            <field name="formation_parent_ids">
+                            <field name="parent_ids">
                                 <tree>
                                     <field name="name"/>
                                 </tree>
@@ -97,7 +83,6 @@
         <field name="arch" type="xml">
             <search>
                 <field name="name"/>
-                <field name="formation_tag_ids"/>
             </search>
         </field>
     </record>
