@@ -16,4 +16,15 @@
         <field name="code">
             action = records.action_setted_goal_edit()</field>
     </record>
+    <record id="action_server_state_progress" model="ir.actions.server">
+        <field name="name">change to progress</field><!--#TODO? change progress to field value "progress" -->
+        <field name="state">object_write</field>
+        <field name="model_id" ref="model_setted_goal"/>
+        <field name="binding_model_id" ref="model_setted_goal"/>
+        <field name="fields_lines" model="ir.server.object.lines" eval="[(0, 0, {
+        'col1': obj().env['ir.model.fields'].search([('model','=','setted.goal'), ('name', '=', 'state')]).id,
+        'evaluation_type': 'value',
+        'value': 'progress'
+        })]"/>
+    </record>
 </odoo>
