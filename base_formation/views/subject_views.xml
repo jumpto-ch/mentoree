@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id='subject_action' model='ir.actions.act_window'>
+        <field name="name">Subject</field>
+        <field name="res_model">subject</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="subject_view_form" model="ir.ui.view">
+        <field name="name">Subject form view</field>
+        <field name="model">subject</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <group>
+                        <field name="formation_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

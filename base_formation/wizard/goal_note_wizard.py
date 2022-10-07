@@ -3,24 +3,24 @@
 from odoo import models, fields, api
 
 
-class SettedGoalNote(models.TransientModel):
-    _name = 'setted.goal.note.wizard'
+class GoalNote(models.TransientModel):
+    _name = 'goal.note.wizard'
     _description = "Wizard to add note"
 
     author_id = fields.Many2one('hr.employee')
     date = fields.Date(default=fields.Date.today())
-    setted_goal_ids = fields.Many2many('setted.goal', String="Setted goal")
+    goal_ids = fields.Many2many('goal')
     note = fields.Text()
 
-    note_template = fields.Many2one('setted.goal.note.template')
+    note_template = fields.Many2one('goal.note.template')
 
     def add_note(self, valid=False):
         for wiz in self:
-            for setted_goal_id in wiz.setted_goal_ids:
-                note_id = self.env['setted.goal.note'].create({
+            for goal_id in wiz.goal_ids:
+                note_id = self.env['goal.note'].create({
                     'author_id': self.author_id.id,
                     'note': self.note,
-                    'setted_goal_id': setted_goal_id.id,
+                    'goal_id': goal_id.id,
                     'valid_goal': valid
                 })
 

@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id='setted_goal_note_action' model='ir.actions.act_window'>
-        <field name="name">Setted goal note</field>
-        <field name="res_model">setted.goal.note</field>
+    <record id='goal_note_action' model='ir.actions.act_window'>
+        <field name="name">Goal note</field>
+        <field name="res_model">goal.note</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-    <record id='setted_goal_note_template_action' model='ir.actions.act_window'>
-        <field name="name">Setted goal note template</field>
-        <field name="res_model">setted.goal.note.template</field>
+    <record id='goal_note_template_action' model='ir.actions.act_window'>
+        <field name="name">Goal note template</field>
+        <field name="res_model">goal.note.template</field>
         <field name="view_mode">tree</field>
     </record>
 
-    <record id="setted_goal_note_view_tree" model="ir.ui.view">
-        <field name="name">Setted goal note list</field>
-        <field name="model">setted.goal.note</field>
+    <record id="goal_note_view_tree" model="ir.ui.view">
+        <field name="name">Goal note list</field>
+        <field name="model">goal.note</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="valid_goal"/>
@@ -25,9 +25,9 @@
         </field>
     </record>
 
-    <record id="setted_goal_note_view_form" model="ir.ui.view">
-        <field name="name">Setted goal note form</field>
-        <field name="model">setted.goal.note</field>
+    <record id="goal_note_view_form" model="ir.ui.view">
+        <field name="name">goal note form</field>
+        <field name="model">goal.note</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>
@@ -36,16 +36,16 @@
                         <field name="author_id"/>
                         <field name="note"/>
                         <field name="date"/>
-                        <field name="setted_goal_id"/>
+                        <field name="goal_id"/>
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
 
-    <record id="setted_goal_note_template_view_tree" model="ir.ui.view">
-        <field name="name">Setted goal note template list</field>
-        <field name="model">setted.goal.note.template</field>
+    <record id="goal_note_template_view_tree" model="ir.ui.view">
+        <field name="name">Goal note template list</field>
+        <field name="model">goal.note.template</field>
         <field name="arch" type="xml">
             <tree editable="bottom">
                 <field name="name"/>
