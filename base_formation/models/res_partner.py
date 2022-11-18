@@ -6,11 +6,11 @@ from odoo import models, fields
 class Trainee(models.Model):
     _name = 'res.partner'
     _inherit = 'res.partner'
-    _description = 'Trainee information'
+    _description = """Trainee information"""
 
     is_trainee = fields.Boolean('Trainee')
     goal_ids = fields.One2many('goal', 'trainee_id', ondelete='cascade')
-    count_total_goals = fields.Integer('Number of goal to achieve', compute="_compute_count_total_goals")
+    count_total_goals = fields.Integer('Number of goal to validate', compute="_compute_count_total_goals")
     trainer_id = fields.Many2one('hr.employee')
 
     def _compute_count_total_goals(self):
@@ -35,7 +35,6 @@ class Trainee(models.Model):
     def action_goal_edit(self):
         view_id = self.env.ref('base_formation.goal_edit_wizard_form').id
         return {
-            'name': 'Edit goal attribution',
             'type': 'ir.actions.act_window',
             'view_mode': 'form',
             'views': [(view_id, 'form')],

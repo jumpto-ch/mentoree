@@ -5,7 +5,7 @@ from odoo import models, fields, api, _
 
 class Formation(models.Model):
     _name = 'formation'
-    _description = 'Formation that trainer will teach to trainee'
+    _description = """Formation that trainer will teach to trainee"""
 
     name = fields.Char()
     description = fields.Html()

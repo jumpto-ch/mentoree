@@ -5,7 +5,7 @@ from odoo import models, fields
 
 class GoalEditWizard(models.TransientModel):
     _name = 'goal.edit.wizard'
-    _description = "Wizard to change list of subject of a trainee"
+    _description = """Wizard to add a list of subject of a trainee"""
 
     trainee_ids = fields.Many2many('res.partner')
     subject_ids = fields.Many2many('subject')

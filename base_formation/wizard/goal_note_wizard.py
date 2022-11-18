@@ -5,7 +5,7 @@ from odoo import models, fields, api
 
 class GoalNote(models.TransientModel):
     _name = 'goal.note.wizard'
-    _description = "Wizard to add note"
+    _description = """Wizard to create a new note"""
 
     author_id = fields.Many2one('hr.employee')
     date = fields.Date(default=fields.Date.today())

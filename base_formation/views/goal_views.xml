@@ -19,8 +19,8 @@
              'search_default_trainee_id': active_id,
              'search_default_nottodo_filter': True,
              'search_default_formation_filter': True,
-             }</field>
-
+             }
+         </field>
     </record>
 
     <record id="goal_view_tree" model="ir.ui.view">
@@ -32,7 +32,7 @@
                 <field name="subject_name"/>
                 <field name="trainee_id"/>
                 <field name="state"/>
-                <field name="achieve_date"/>
+                <field name="validation_date"/>
             </tree>
         </field>
     </record>
@@ -59,7 +59,7 @@
                             <field name="trainee_id"/>
                         </group>
                         <group>
-                            <field name="achieve_date"/>
+                            <field name="validation_date"/>
                         </group>
                     </group>
                     <field name="notes_ids">
@@ -87,9 +87,11 @@
                             context="{'group_by':'trainee_id'}"/>
                     <filter string="State" name="state_filter"
                             context="{'group_by':'state'}"/>
+                    <filter string="Formation" name="formation_filter"
+                            context="{'group_by':'formation_name'}"/>
                 </group>
                 <group>
-                    <filter string="Success" name="achieved_filter" domain="[('state', '=', 'done')]"/>
+                    <filter string="Success" name="validated_filter" domain="[('state', '=', 'done')]"/>
                     <filter string="Active" name="nottodo_filter" domain="[('state', '=', 'progress')]"/>
                     <filter string="To do" name="todo_filter" domain="[('state', '=', 'to_do')]"/>
                 </group>

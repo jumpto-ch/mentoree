@@ -26,6 +26,7 @@
                     <h1>
                         <field name="name"/>
                     </h1>
+                    <field name="description"/>
                     <notebook>
                         <page string="Subject">
                             <field name="subject_ids">

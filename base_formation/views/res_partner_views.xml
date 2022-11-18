@@ -16,14 +16,14 @@
         <field name="inherit_id" ref="base.view_res_partner_filter"/>
         <field name="arch" type="xml">
             <filter name="type_person" position="before">
-                <filter string="trainee" name="is_trainee_filter" domain="[('is_trainee', '=', True)]"/>
+                <filter string="Trainee" name="is_trainee_filter" domain="[('is_trainee', '=', True)]"/>
                 <separator/>
             </filter>
         </field>
     </record>
 
     <record id="view_parent_form" model="ir.ui.view">
-        <field name="name">PER parent view</field>
+        <field name="name">Parent view</field>
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="family_base.family_member_form"/>
         <field name="arch" type="xml">

@@ -5,6 +5,6 @@ from odoo import models, fields, api
 
 class GoalNoteTemplate(models.Model):
     _name = 'goal.note.template'
-    _description = 'Trainee\'s subject note template'
+    _description = """Template for quickly write a typical note"""
 
     name = fields.Text()

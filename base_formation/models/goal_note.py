@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+from odoo import models, fields, api, _
 
 
 class GoalNote(models.Model):
     _name = 'goal.note'
-    _description = 'Manage trainee\'s subject note'
+    _description = """Note added to a goal to comment and/or validate"""
 
     author_id = fields.Many2one('hr.employee')
     date = fields.Date(default=fields.Date.today())
@@ -18,5 +18,5 @@ class GoalNote(models.Model):
         for note in self:
             if self.search_count([('goal_id', '=', note.goal_id.id),
                                   ('valid_goal', '=', True)]) > 1:
-                raise models.ValidationError('Only one note can valid the goal')
+                raise models.ValidationError(_('Only one note can valid the goal'))
 
