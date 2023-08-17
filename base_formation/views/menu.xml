@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <menuitem name="Formation" id="formation_base_menu"/>
-    <menuitem name="Trainee" id="trainee_menu" parent="formation_base_menu" action="action_all_trainee"/>
-    <menuitem name="Goal" id="goal_menu" parent="formation_base_menu" action="goal_action"/>
+    <menuitem name="Formation" id="formation_base_menu" action="action_all_trainees" web_icon="base_formation,static/description/icon.png"/>
+    <menuitem name="Trainees" id="trainees_menu" parent="formation_base_menu" action="action_all_trainees"/>
+    <menuitem name="Goals" id="goals_menu" parent="formation_base_menu" action="goals_action"/>
 
     <menuitem name="Settings" id="formation_settings_menu" parent="formation_base_menu"/>
 
     <menuitem name="Base" id="base_menu" parent="formation_base_menu"/>
-    <menuitem name="Subject" id="subject_menu" parent="base_menu" action="subject_action"/>
-    <menuitem name="Formation" id="formation_menu" parent="base_menu" action="formation_action"/>
-    <menuitem name="Note Template" id="goal_note_template_menu" parent="base_menu" action="goal_note_template_action"/>
+    <menuitem name="Subjects" id="subjects_menu" parent="base_menu" action="subjects_action"/>
+    <menuitem name="Formations" id="formations_menu" parent="base_menu" action="formations_action"/>
+    <menuitem name="Note templates" id="goal_note_templates_menu" parent="base_menu" action="goal_note_templates_action"/>
 
 </odoo>

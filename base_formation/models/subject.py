@@ -5,7 +5,7 @@ from odoo import models, fields, api, _
 
 class Subject(models.Model):
     _name = 'subject'
-    _description = """a subject is a achievable part of a formation"""
+    _description = """A subject is a achievable part of a formation"""
 
     name = fields.Char()
     description = fields.Html()

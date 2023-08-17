@@ -5,7 +5,7 @@ from odoo import models, fields, api
 
 class Goal(models.Model):
     _name = 'goal'
-    _description = """Subject assign to a trainee"""
+    _description = """A goal represent a subject assign to a trainee"""
 
     name = fields.Char()
     validation_date = fields.Date(default=False)

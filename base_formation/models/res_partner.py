@@ -6,7 +6,7 @@ from odoo import models, fields
 class Trainee(models.Model):
     _name = 'res.partner'
     _inherit = 'res.partner'
-    _description = """Trainee information"""
+    _description = """Partner who is being taught formation by trainer"""
 
     is_trainee = fields.Boolean('Trainee')
     goal_ids = fields.One2many('goal', 'trainee_id', ondelete='cascade')

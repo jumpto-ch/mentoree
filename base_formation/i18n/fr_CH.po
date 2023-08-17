@@ -1,11 +1,13 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
 # 	* base_formation
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-09 15:53+0000\n"
-"PO-Revision-Date: 2022-11-09 15:53+0000\n"
+"POT-Creation-Date: 2023-08-11 12:41+0000\n"
+"PO-Revision-Date: 2023-08-11 12:41+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -40,14 +42,9 @@ msgid "Add new note"
 msgstr "Ajouter une nouvelle note"
 
 #. module: base_formation
-#: model:ir.actions.act_window,name:base_formation.action_all_trainee
-msgid "All trainee"
+#: model:ir.actions.act_window,name:base_formation.action_all_trainees
+msgid "All trainees"
 msgstr "Tous les étudiants"
-
-#. module: base_formation
-#: model:ir.model,name:base_formation.model_subject
-msgid "Attentes fondamentale du plan d'etude romand"
-msgstr "Attentes fondamentale du plan d'etude romand"
 
 #. module: base_formation
 #: model:ir.model.fields,field_description:base_formation.field_goal_note__author_id
@@ -69,8 +66,8 @@ msgstr "Annuler"
 
 #. module: base_formation
 #: model:ir.actions.server,name:base_formation.action_server_state_progress
-msgid "Change to progress"
-msgstr "Modifier à en progrès"
+msgid "Change to In progress"
+msgstr "Modifier à En progrès"
 
 #. module: base_formation
 #: model:ir.actions.act_window,name:base_formation.trainee_2_goal_action
@@ -139,40 +136,47 @@ msgstr "Editer l'attribution des objectifs"
 
 
 #. module: base_formation
+#: model:ir.model,name:base_formation.model_hr_employee
+msgid "Employee that teach formations to partners"
+msgstr "Employée enseignant des formations au contacts"
+
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_goal__formation_id
+#: model:ir.model.fields,field_description:base_formation.field_subject__formation_id
+#: model:ir.model.fields,field_description:base_formation.field_subject__formation_ids
 #: model:ir.ui.menu,name:base_formation.formation_base_menu
+#: model_terms:ir.ui.view,arch_db:base_formation.goal_view_search
 msgid "Formation"
 msgstr "Formation"
 
 #. module: base_formation
-#: model:ir.actions.act_window,name:base_formation.formation_action
-#: model:ir.model.fields,field_description:base_formation.field_goal__formation_id
-#: model:ir.model.fields,field_description:base_formation.field_subject__formation_id
-#: model:ir.model.fields,field_description:base_formation.field_subject__formation_ids
-#: model:ir.ui.menu,name:base_formation.formation_menu
-msgid "Formation"
-msgstr "Définition d'objectif"
+#: model:ir.model.fields,field_description:base_formation.field_goal__formation_name
+#: model:ir.model.fields,field_description:base_formation.field_subject__formation_name
+msgid "Formation name"
+msgstr "Nom de la formation"
 
 #. module: base_formation
-#: model:ir.actions.act_window,name:base_formation.goal_action
+#: model:ir.actions.act_window,name:base_formation.formations_action
+#: model:ir.ui.menu,name:base_formation.formations_menu
+msgid "Formations"
+msgstr "Formations"
+
+#. module: base_formation
+#: model_terms:ir.ui.view,arch_db:base_formation.formation_view_form
+msgid "Formations included in"
+msgstr "Est inclus dans ces formations"
+
+#. module: base_formation
 #: model:ir.model.fields,field_description:base_formation.field_goal_note__goal_id
 #: model:ir.model.fields,field_description:base_formation.field_goal_note_wizard__goal_ids
 #: model:ir.model.fields,field_description:base_formation.field_res_partner__goal_ids
 #: model:ir.model.fields,field_description:base_formation.field_res_users__goal_ids
-#: model:ir.ui.menu,name:base_formation.goal_menu
 msgid "Goal"
 msgstr "Objectif"
 
 #. module: base_formation
-#: model:ir.actions.act_window,name:base_formation.goal_note_action
-msgid "Goal note"
-msgstr "Note"
-
-#. module: base_formation
-#: model:ir.actions.act_window,name:base_formation.goal_note_template_action
-msgid "Goal note template"
-msgstr "Modèle de note"
-
-#. module: base_formation
+#: model:ir.actions.act_window,name:base_formation.goals_action
+#: model:ir.ui.menu,name:base_formation.goals_menu
 #: model_terms:ir.ui.view,arch_db:base_formation.view_parent_form
 msgid "Goals"
 msgstr "Objectifs"
@@ -200,8 +204,8 @@ msgstr "En progrès"
 
 #. module: base_formation
 #: model_terms:ir.ui.view,arch_db:base_formation.formation_view_form
-msgid "Included formation"
-msgstr "Objectif inclu"
+msgid "Included formations"
+msgstr "Inclus ces formations"
 
 #. module: base_formation
 #: model:ir.model.fields,field_description:base_formation.field_formation____last_update
@@ -238,7 +242,7 @@ msgstr "Dernière mise à jour le"
 
 #. module: base_formation
 #: model:ir.model.fields,field_description:base_formation.field_formation__child_ids
-msgid "List of childs"
+msgid "List of children"
 msgstr "Liste des enfants"
 
 #. module: base_formation
@@ -247,15 +251,9 @@ msgid "List of parents"
 msgstr "Liste des parents"
 
 #. module: base_formation
-#: model:hr.job,name:base_formation.per_job_mentor
-msgid "Mentor"
-msgstr "Mentor"
-
-#. module: base_formation
 #: model:ir.model.fields,field_description:base_formation.field_formation__name
 #: model:ir.model.fields,field_description:base_formation.field_goal__name
 #: model:ir.model.fields,field_description:base_formation.field_goal_note_template__name
-#: model:ir.model.fields,field_description:base_formation.field_subject__formation_name
 #: model:ir.model.fields,field_description:base_formation.field_subject__name
 msgid "Name"
 msgstr "Nom"
@@ -268,9 +266,14 @@ msgstr "Note"
 
 #. module: base_formation
 #: model:ir.model.fields,field_description:base_formation.field_goal_note_wizard__note_template
-#: model:ir.ui.menu,name:base_formation.goal_note_template_menu
-msgid "Note Template"
+msgid "Note template"
 msgstr "Modèle de note"
+
+#. module: base_formation
+#: model:ir.actions.act_window,name:base_formation.goal_note_templates_action
+#: model:ir.ui.menu,name:base_formation.goal_note_templates_menu
+msgid "Note templates"
+msgstr "Modèles de note"
 
 #. module: base_formation
 #: model:ir.model,name:base_formation.model_goal_note
@@ -278,6 +281,7 @@ msgid "Note added to a goal to comment and/or validate"
 msgstr "Note ajoutée à un objectif afin de commenter et/ou valider"
 
 #. module: base_formation
+#: model:ir.actions.act_window,name:base_formation.goal_notes_action
 #: model:ir.model.fields,field_description:base_formation.field_goal__notes_ids
 msgid "Notes"
 msgstr "Notes"
@@ -289,21 +293,10 @@ msgid "Number of goals to achieve"
 msgstr "Nombre d'objectifs à atteindre"
 
 #. module: base_formation
-#: model:ir.model,name:base_formation.model_formation
-msgid "Objectif du plan d'etude romand"
-msgstr "Objectif du plan d'etude romand"
-
-#. module: base_formation
 #: code:addons/base_formation/models/goal_note.py:0
-#: code:addons/jumpto/training/base_formation/models/goal_note.py:0
 #, python-format
 msgid "Only one note can valid the goal"
 msgstr "Une seule note doit valider un objectif"
-
-#. module: base_formation
-#: model_terms:ir.ui.view,arch_db:base_formation.formation_view_form
-msgid "Parent's formation"
-msgstr "Formation parent"
 
 #. module: base_formation
 #: model:ir.ui.menu,name:base_formation.formation_settings_menu
@@ -317,14 +310,23 @@ msgid "State"
 msgstr "État"
 
 #. module: base_formation
-#: model:ir.actions.act_window,name:base_formation.subject_action
 #: model:ir.model.fields,field_description:base_formation.field_formation__subject_ids
 #: model:ir.model.fields,field_description:base_formation.field_goal__subject_id
 #: model:ir.model.fields,field_description:base_formation.field_goal_edit_wizard__subject_ids
-#: model:ir.ui.menu,name:base_formation.subject_menu
-#: model_terms:ir.ui.view,arch_db:base_formation.formation_view_form
 msgid "Subject"
 msgstr "Sujet"
+
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_goal__subject_name
+msgid "Subject name"
+msgstr "Nom du sujet"
+
+#. module: base_formation
+#: model:ir.actions.act_window,name:base_formation.subjects_action
+#: model:ir.ui.menu,name:base_formation.subjects_menu
+#: model_terms:ir.ui.view,arch_db:base_formation.formation_view_form
+msgid "Subjects"
+msgstr "Sujets"
 
 #. module: base_formation
 #: model_terms:ir.ui.view,arch_db:base_formation.goal_view_search
@@ -333,7 +335,7 @@ msgstr "Succès"
 
 #. module: base_formation
 #: model:ir.model,name:base_formation.model_goal_note_template
-msgid "Template for quickly write a typical note"
+msgid "Template for writing quickly a typical note"
 msgstr "Modèle pour rapidement écrire une note générique"
 
 #. module: base_formation
@@ -348,7 +350,6 @@ msgstr "À faire"
 #: model:ir.model.fields,field_description:base_formation.field_hr_employee__trainee_ids
 #: model:ir.model.fields,field_description:base_formation.field_res_partner__is_trainee
 #: model:ir.model.fields,field_description:base_formation.field_res_users__is_trainee
-#: model:ir.ui.menu,name:base_formation.trainee_menu
 #: model_terms:ir.ui.view,arch_db:base_formation.goal_view_search
 #: model_terms:ir.ui.view,arch_db:base_formation.view_res_partner_filter
 #: model:res.groups,name:base_formation.group_trainee
@@ -356,21 +357,17 @@ msgid "Trainee"
 msgstr "Étudiant"
 
 #. module: base_formation
-#: model:ir.model,name:base_formation.model_res_partner
-msgid "Trainee information"
-msgstr "Information de l'étudiant"
+#: model:ir.ui.menu,name:base_formation.trainees_menu
+msgid "Trainees"
+msgstr "Étudiants"
 
 #. module: base_formation
+#: model:hr.job,name:base_formation.job_trainer
 #: model:ir.model.fields,field_description:base_formation.field_res_partner__trainer_id
 #: model:ir.model.fields,field_description:base_formation.field_res_users__trainer_id
 #: model:res.groups,name:base_formation.group_trainer
 msgid "Trainer"
-msgstr "Éducateur"
-
-#. module: base_formation
-#: model:ir.model,name:base_formation.model_hr_employee
-msgid "Trainer information"
-msgstr "Information de l'éducateur"
+msgstr "Enseignant"
 
 #. module: base_formation
 #: model:ir.model.fields,field_description:base_formation.field_goal_note__valid_goal
@@ -389,25 +386,14 @@ msgstr "Date de validation"
 
 #. module: base_formation
 #: model:ir.model,name:base_formation.model_goal_edit_wizard
-msgid "Wizard to add a list of subject of a trainee"
-msgstr "Editeur pour ajouter une liste de sujet à un étudiant"
+msgid ""
+"Wizard to add selectable subjects to the list of goals of selectable "
+"trainees"
+msgstr ""
+"Éditeur pour ajouter une sélection de sujet à la liste d'objectifs "
+"d'une sélection d'étudiant"
 
 #. module: base_formation
 #: model:ir.model,name:base_formation.model_goal_note_wizard
 msgid "Wizard to create a new note"
-msgstr "Editeur pour créer une nouvelle note"
-
-#. module: base_formation
-#: model:ir.model,name:base_formation.model_goal
-msgid "Subject assign to a trainee"
-msgstr "Sujet assigné à un étudiant"
-
-#. module: base_formation
-#: model:ir.model.fields,field_description:base_formation.field_goal__subject_name
-msgid "Subject name"
-msgstr "Nom du sujet"
-
-#. module: base_formation
-#: model:ir.model.fields,field_description:base_formation.field_goal__formation_name
-msgid "Formation name"
-msgstr "Nom de l'objectif"
+msgstr "Éditeur pour créer une nouvelle note"

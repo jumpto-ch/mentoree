@@ -12,7 +12,7 @@ class GoalNote(models.TransientModel):
     goal_ids = fields.Many2many('goal')
     note = fields.Text()
 
-    note_template = fields.Many2one('goal.note.template')
+    note_template = fields.Many2one('goal.note.template', string='Note template')
 
     def add_note(self, valid=False):
         for wiz in self:

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id='action_all_trainee' model='ir.actions.act_window'>
-        <field name="name">All trainee</field>
+    <record id='action_all_trainees' model='ir.actions.act_window'>
+        <field name="name">All trainees</field>
         <field name="res_model">res.partner</field>
         <field name="view_mode">kanban,tree,form</field>
         <field name="domain">[('is_trainee', '=', True)]</field>
@@ -23,7 +23,6 @@
     </record>
 
     <record id="view_parent_form" model="ir.ui.view">
-        <field name="name">Parent view</field>
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="family_base.family_member_form"/>
         <field name="arch" type="xml">

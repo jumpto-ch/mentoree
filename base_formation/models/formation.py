@@ -13,4 +13,4 @@ class Formation(models.Model):
     subject_ids = fields.Many2many('subject')
 
     parent_ids = fields.Many2many('formation', 'formation_tree_rel', 'parent', 'child', string='List of parents')
-    child_ids = fields.Many2many('formation', 'formation_tree_rel', 'child', 'parent', string='List of childs')
+    child_ids = fields.Many2many('formation', 'formation_tree_rel', 'child', 'parent', string='List of children')

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id='goal_action' model='ir.actions.act_window'>
-        <field name="name">Goal</field>
+    <record id='goals_action' model='ir.actions.act_window'>
+        <field name="name">Goals</field>
         <field name="res_model">goal</field>
         <field name="view_mode">tree,form</field>
         <field name="context">{
@@ -44,7 +44,7 @@
             <form>
                 <header>
                     <button string="Add a note" class="btn-primary" name="action_add_note" type="object"/>
-                    <button string="Cancel" name="invalid_setted_goal" type="object"
+                    <button string="Cancel" name="invalid_goal" type="object"
                             attrs="{'invisible': [('state', '!=', 'done')]}"/>
                     <field name="state" widget="statusbar"/>
                 </header>

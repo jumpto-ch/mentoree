@@ -1,5 +1,5 @@
 <odoo>
-    <record id="per_job_mentor" model="hr.job">
-        <field name="name">Mentor</field>
+    <record id="job_trainer" model="hr.job">
+        <field name="name">Trainer</field>
     </record>
 </odoo>
