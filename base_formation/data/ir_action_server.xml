@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="action_server_add_note" model="ir.actions.server">
-        <field name="name">add a note</field>
+        <field name="name">Add a note</field>
         <field name="state">code</field>
-        <field name="model_id" ref="model_setted_goal"/>
-        <field name="binding_model_id" ref="model_setted_goal"/>
+        <field name="model_id" ref="model_goal"/>
+        <field name="binding_model_id" ref="model_goal"/>
         <field name="code">
             action = records.action_add_note()</field>
     </record>
-    <record id="action_server_setted_goal_edit" model="ir.actions.server">
+    <record id="action_server_goal_edit" model="ir.actions.server">
         <field name="name">Edit goal attribution</field>
         <field name="state">code</field>
         <field name="model_id" ref="model_res_partner"/>
         <field name="binding_model_id" ref="model_res_partner"/>
         <field name="code">
-            action = records.action_setted_goal_edit()</field>
+            action = records.action_goal_edit()</field>
+    </record>
+    <record id="action_server_state_progress" model="ir.actions.server">
+        <field name="name">Change to In progress</field><!--#TODO? change progress to field value "progress" -->
+        <field name="state">object_write</field>
+        <field name="model_id" ref="model_goal"/>
+        <field name="binding_model_id" ref="model_goal"/>
+        <field name="fields_lines" model="ir.server.object.lines" eval="[(0, 0, {
+        'col1': ref('base_formation.field_goal__state'),
+        'evaluation_type': 'value',
+        'value': 'progress'
+        })]"/>
     </record>
 </odoo>

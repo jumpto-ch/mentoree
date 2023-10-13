@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <menuitem name="Formation's tag" id="formation_tag_menu" parent="base_menu" action="formation_tag_action"/>
+    <menuitem name="Formation's tag" id="formation_tag_menu" parent="base_formation.base_menu" action="formation_tag_action"/>
 </odoo>

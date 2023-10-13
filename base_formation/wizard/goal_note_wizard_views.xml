@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="setted_goal_note_wizard_view_form" model="ir.ui.view">
-        <field name="name">Setted goal note wizard</field>
-        <field name="model">setted.goal.note.wizard</field>
+    <record id="goal_note_wizard_view_form" model="ir.ui.view">
+        <field name="name">Goal note wizard</field>
+        <field name="model">goal.note.wizard</field>
         <field name="arch" type="xml">
             <form string="Add new note">
                 <sheet>

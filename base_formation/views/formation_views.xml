@@ -1,34 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id='subject_action' model='ir.actions.act_window'>
-        <field name="name">Subject</field>
-        <field name="res_model">formation.subject</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-
-    <record id='formation_action' model='ir.actions.act_window'>
-        <field name="name">Formation</field>
+    <record id='formations_action' model='ir.actions.act_window'>
+        <field name="name">Formations</field>
         <field name="res_model">formation</field>
         <field name="view_mode">tree,form</field>
     </record>
-
-    <record id="subject_view_form" model="ir.ui.view">
-        <field name="name">Subject form view</field>
-        <field name="model">formation.subject</field>
-        <field name="arch" type="xml">
-            <form>
-                <sheet>
-                    <h1>
-                        <field name="name"/>
-                    </h1>
-                    <group>
-                        <field name="formation_ids"/>
-                    </group>
-                </sheet>
-            </form>
-        </field>
-    </record>
-
 
     <record id="formation_view_tree" model="ir.ui.view">
         <field name="name">Formation list</field>
@@ -36,6 +12,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
+                <field name="description"/>
             </tree>
         </field>
     </record>
@@ -49,22 +26,23 @@
                     <h1>
                         <field name="name"/>
                     </h1>
+                    <field name="description"/>
                     <notebook>
-                        <page string="Subject">
+                        <page string="Subjects">
                             <field name="subject_ids">
                                 <tree>
                                     <field name="name"/>
                                 </tree>
                             </field>
                         </page>
-                        <page string="Included formation">
+                        <page string="Included formations">
                             <field name="child_ids">
                                 <tree>
                                     <field name="name"/>
                                 </tree>
                             </field>
                         </page>
-                        <page string="Parent's formation">
+                        <page string="Formations included in">
                             <field name="parent_ids">
                                 <tree>
                                     <field name="name"/>

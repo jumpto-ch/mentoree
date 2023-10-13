@@ -1,516 +1,400 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* plan_etude_romand
+# 	* base_formation
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 08:38+0000\n"
-"PO-Revision-Date: 2021-08-20 13:23+0200\n"
+"POT-Creation-Date: 2023-08-11 12:41+0000\n"
+"PO-Revision-Date: 2023-08-11 12:41+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-"Language: fr_CH\n"
-"X-Generator: Poedit 2.4.2\n"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal__is_achieve
-msgid "Achieve"
-msgstr "Terminé"
+#. module: base_formation
+#: model_terms:ir.ui.view,arch_db:base_formation.goal_view_search
+msgid "Active"
+msgstr "Actif"
 
-#. module: plan_etude_romand
-#: model_terms:ir.ui.view,arch_db:plan_etude_romand.per_goal_note_view_wizard_form
+#. module: base_formation
+#: model_terms:ir.ui.view,arch_db:base_formation.goal_note_wizard_view_form
 msgid "Add"
 msgstr "Ajouter"
 
-#. module: plan_etude_romand
-#: model_terms:ir.ui.view,arch_db:plan_etude_romand.per_goal_view_form
+#. module: base_formation
+#: model:ir.actions.server,name:base_formation.action_server_add_note
+#: model_terms:ir.ui.view,arch_db:base_formation.goal_view_form
 msgid "Add a note"
 msgstr "Ajouter une note"
 
-#. module: plan_etude_romand
-#: model_terms:ir.ui.view,arch_db:plan_etude_romand.per_goal_note_view_wizard_form
+#. module: base_formation
+#: model_terms:ir.ui.view,arch_db:base_formation.goal_note_wizard_view_form
 msgid "Add and valid"
 msgstr "Ajouter et valider"
 
-#. module: plan_etude_romand
-#: model_terms:ir.ui.view,arch_db:plan_etude_romand.per_goal_note_view_wizard_form
-#: model_terms:ir.ui.view,arch_db:plan_etude_romand.view_wizard_update_per
+#. module: base_formation
+#: model_terms:ir.ui.view,arch_db:base_formation.goal_note_wizard_view_form
 msgid "Add new note"
 msgstr "Ajouter une nouvelle note"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_domain__aim
-msgid "Aim"
-msgstr "But"
+#. module: base_formation
+#: model:ir.actions.act_window,name:base_formation.action_all_trainees
+msgid "All trainees"
+msgstr "Tous les étudiants"
 
-#. module: plan_etude_romand
-#: model:ir.actions.act_window,name:plan_etude_romand.action_all_student
-msgid "All Student"
-msgstr "Étudiants"
-
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note__author_id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note_wizard__author_id
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_goal_note__author_id
+#: model:ir.model.fields,field_description:base_formation.field_goal_note_wizard__author_id
 msgid "Author"
 msgstr "Auteur"
 
-#. module: plan_etude_romand
-#: model:ir.model,name:plan_etude_romand.model_per_domain
-msgid "Base object for managing goal"
-msgstr "Object de base pour la gestion de l'objectif"
+#. module: base_formation
+#: model:ir.ui.menu,name:base_formation.base_menu
+msgid "Base"
+msgstr "Base"
 
-#. module: plan_etude_romand
-#: model_terms:ir.ui.view,arch_db:plan_etude_romand.per_goal_note_view_wizard_form
-#: model_terms:ir.ui.view,arch_db:plan_etude_romand.per_goal_view_form
-#: model_terms:ir.ui.view,arch_db:plan_etude_romand.view_wizard_update_per
+#. module: base_formation
+#: model_terms:ir.ui.view,arch_db:base_formation.goal_edit_wizard_form
+#: model_terms:ir.ui.view,arch_db:base_formation.goal_note_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:base_formation.goal_view_form
 msgid "Cancel"
 msgstr "Annuler"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_domain__code
-msgid "Code"
-msgstr "Code"
+#. module: base_formation
+#: model:ir.actions.server,name:base_formation.action_server_state_progress
+msgid "Change to In progress"
+msgstr "Modifier à En progrès"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_cycle__create_uid
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_discipline__create_uid
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_domain__create_uid
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_expectation__create_uid
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal__create_uid
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_definition__create_uid
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note__create_uid
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note_wizard__create_uid
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_thematic__create_uid
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_update_wizard__create_uid
+#. module: base_formation
+#: model:ir.actions.act_window,name:base_formation.trainee_2_goal_action
+msgid "Chosen trainee goals"
+msgstr "Objectifs de l'étudiant sélectionné"
+
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_formation__create_uid
+#: model:ir.model.fields,field_description:base_formation.field_goal__create_uid
+#: model:ir.model.fields,field_description:base_formation.field_goal_edit_wizard__create_uid
+#: model:ir.model.fields,field_description:base_formation.field_goal_note__create_uid
+#: model:ir.model.fields,field_description:base_formation.field_goal_note_template__create_uid
+#: model:ir.model.fields,field_description:base_formation.field_goal_note_wizard__create_uid
+#: model:ir.model.fields,field_description:base_formation.field_subject__create_uid
 msgid "Created by"
-msgstr "Créé par"
+msgstr "Crée par"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_cycle__create_date
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_discipline__create_date
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_domain__create_date
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_expectation__create_date
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal__create_date
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_definition__create_date
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note__create_date
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note_wizard__create_date
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_thematic__create_date
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_update_wizard__create_date
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_formation__create_date
+#: model:ir.model.fields,field_description:base_formation.field_goal__create_date
+#: model:ir.model.fields,field_description:base_formation.field_goal_edit_wizard__create_date
+#: model:ir.model.fields,field_description:base_formation.field_goal_note__create_date
+#: model:ir.model.fields,field_description:base_formation.field_goal_note_template__create_date
+#: model:ir.model.fields,field_description:base_formation.field_goal_note_wizard__create_date
+#: model:ir.model.fields,field_description:base_formation.field_subject__create_date
 msgid "Created on"
-msgstr "Créé le"
+msgstr "Crée le"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_expectation__per_cycle
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_definition__cycle_id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_res_partner__per_cycle_id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_res_users__per_cycle_id
-#: model:ir.ui.menu,name:plan_etude_romand.per_cycle_menu
-#: model_terms:ir.ui.view,arch_db:plan_etude_romand.per_goal_definition_view_search
-msgid "Cycle"
-msgstr "Cycles"
-
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal__achieve_date
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note__date
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note_wizard__date
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_goal_note__date
+#: model:ir.model.fields,field_description:base_formation.field_goal_note_wizard__date
 msgid "Date"
 msgstr "Date"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_expectation__description
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_definition__description
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_formation__description
+#: model:ir.model.fields,field_description:base_formation.field_subject__description
 msgid "Description"
 msgstr "Description"
 
-#. module: plan_etude_romand
-#: model:res.groups,name:plan_etude_romand.group_director
+#. module: base_formation
+#: model:res.groups,name:base_formation.group_director
 msgid "Director"
 msgstr "Directeur"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_domain__discipline_ids
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_definition__discipline_id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_definition__discipline_ids
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_thematic__discipline_ids
-#: model:ir.ui.menu,name:plan_etude_romand.per_discipline_menu2
-msgid "Discipline"
-msgstr "Discipline"
-
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_cycle__display_name
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_discipline__display_name
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_domain__display_name
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_expectation__display_name
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal__display_name
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_definition__display_name
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note__display_name
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note_wizard__display_name
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_thematic__display_name
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_update_wizard__display_name
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_formation__display_name
+#: model:ir.model.fields,field_description:base_formation.field_goal__display_name
+#: model:ir.model.fields,field_description:base_formation.field_goal_edit_wizard__display_name
+#: model:ir.model.fields,field_description:base_formation.field_goal_note__display_name
+#: model:ir.model.fields,field_description:base_formation.field_goal_note_template__display_name
+#: model:ir.model.fields,field_description:base_formation.field_goal_note_wizard__display_name
+#: model:ir.model.fields,field_description:base_formation.field_subject__display_name
 msgid "Display Name"
-msgstr "Afficher Nom"
+msgstr "Nom Affiché"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_discipline__domain_id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_expectation__per_domain
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal__domain_id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_definition__domain_id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_thematic__domain_id
-#: model:ir.ui.menu,name:plan_etude_romand.per_domain_menu
-#: model_terms:ir.ui.view,arch_db:plan_etude_romand.per_goal_definition_view_search
-msgid "Domain"
-msgstr "Domaine"
-
-#. module: plan_etude_romand
-#: model:ir.actions.act_window,name:plan_etude_romand.per_domain_action
-msgid "Domain action"
-msgstr "Domaine"
-
-#. module: plan_etude_romand
-#: model:ir.model.fields.selection,name:plan_etude_romand.selection__per_goal__state__done
+#. module: base_formation
+#: model:ir.model.fields.selection,name:base_formation.selection__goal__state__done
 msgid "Done"
-msgstr "Fait"
+msgstr "Terminé"
 
-#. module: plan_etude_romand
-#: model:hr.job,name:plan_etude_romand.per_job_teacher
-msgid "Enseignant/e"
-msgstr "Enseignant/e"
-
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal__expectation_id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_definition__expectation_ids
-#: model:ir.ui.menu,name:plan_etude_romand.per_expectation_menu
-#: model_terms:ir.ui.view,arch_db:plan_etude_romand.per_goal_definition_view_form
-msgid "Expectation"
-msgstr "Attentes fondamentales"
+#. module: base_formation
+#: model:ir.actions.server,name:base_formation.action_server_goal_edit
+msgid "Edit goal attribution"
+msgstr "Editer l'attribution des objectifs"
 
 
-#. module: plan_etude_romand
-#: model:ir.actions.act_window,name:plan_etude_romand.per_goal_action
-#: model:ir.actions.act_window,name:plan_etude_romand.student_2_goal_action
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note__per_goal_id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note_wizard__per_goal_id
+#. module: base_formation
+#: model:ir.model,name:base_formation.model_hr_employee
+msgid "Employee that teach formations to partners"
+msgstr "Employée enseignant des formations au contacts"
+
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_goal__formation_id
+#: model:ir.model.fields,field_description:base_formation.field_subject__formation_id
+#: model:ir.model.fields,field_description:base_formation.field_subject__formation_ids
+#: model:ir.ui.menu,name:base_formation.formation_base_menu
+#: model_terms:ir.ui.view,arch_db:base_formation.goal_view_search
+msgid "Formation"
+msgstr "Formation"
+
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_goal__formation_name
+#: model:ir.model.fields,field_description:base_formation.field_subject__formation_name
+msgid "Formation name"
+msgstr "Nom de la formation"
+
+#. module: base_formation
+#: model:ir.actions.act_window,name:base_formation.formations_action
+#: model:ir.ui.menu,name:base_formation.formations_menu
+msgid "Formations"
+msgstr "Formations"
+
+#. module: base_formation
+#: model_terms:ir.ui.view,arch_db:base_formation.formation_view_form
+msgid "Formations included in"
+msgstr "Est inclus dans ces formations"
+
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_goal_note__goal_id
+#: model:ir.model.fields,field_description:base_formation.field_goal_note_wizard__goal_ids
+#: model:ir.model.fields,field_description:base_formation.field_res_partner__goal_ids
+#: model:ir.model.fields,field_description:base_formation.field_res_users__goal_ids
 msgid "Goal"
 msgstr "Objectif"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_expectation__goal_definition_id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal__goal_definition_id
-msgid "Goal Definition"
-msgstr "Définition d'objectif"
-
-#. module: plan_etude_romand
-#: model:ir.actions.act_window,name:plan_etude_romand.per_goal_note_action
-msgid "Goal Note"
-msgstr "Note d'objectif"
-
-#. module: plan_etude_romand
-#: model:ir.model,name:plan_etude_romand.model_per_goal
-msgid "Goal assign to a student"
-msgstr "Objectif assigné à un étudiant"
-
-#. module: plan_etude_romand
-#: model:ir.model,name:plan_etude_romand.model_per_goal_definition
-msgid "Goal definition"
-msgstr "Définition d'objectif"
-
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_discipline__goals_ids
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_domain__goals_ids
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_thematic__goals_ids
-#: model:ir.ui.menu,name:plan_etude_romand.per_goals_menu
-#: model_terms:ir.ui.view,arch_db:plan_etude_romand.view_parent_form
+#. module: base_formation
+#: model:ir.actions.act_window,name:base_formation.goals_action
+#: model:ir.ui.menu,name:base_formation.goals_menu
+#: model_terms:ir.ui.view,arch_db:base_formation.view_parent_form
 msgid "Goals"
 msgstr "Objectifs"
 
-#. module: plan_etude_romand
-#: model:ir.ui.menu,name:plan_etude_romand.per_goals_definition_menu
-msgid "Goals Definition"
-msgstr "Définition d'objectifs"
-
-
-#. module: plan_etude_romand
-#: model_terms:ir.ui.view,arch_db:plan_etude_romand.per_goal_view_search
+#. module: base_formation
+#: model_terms:ir.ui.view,arch_db:base_formation.goal_view_search
 msgid "Group By"
 msgstr "Regrouper par"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_cycle__id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_discipline__id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_domain__id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_expectation__id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal__id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_definition__id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note__id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note_wizard__id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_thematic__id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_update_wizard__id
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_formation__id
+#: model:ir.model.fields,field_description:base_formation.field_goal__id
+#: model:ir.model.fields,field_description:base_formation.field_goal_edit_wizard__id
+#: model:ir.model.fields,field_description:base_formation.field_goal_note__id
+#: model:ir.model.fields,field_description:base_formation.field_goal_note_template__id
+#: model:ir.model.fields,field_description:base_formation.field_goal_note_wizard__id
+#: model:ir.model.fields,field_description:base_formation.field_subject__id
 msgid "ID"
 msgstr "ID"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields.selection,name:plan_etude_romand.selection__per_goal__state__progress
-msgid "In Progress"
-msgstr "En cours"
+#. module: base_formation
+#: model:ir.model.fields.selection,name:base_formation.selection__goal__state__progress
+msgid "In progress"
+msgstr "En progrès"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_cycle____last_update
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_discipline____last_update
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_domain____last_update
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_expectation____last_update
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal____last_update
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_definition____last_update
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note____last_update
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note_wizard____last_update
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_thematic____last_update
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_update_wizard____last_update
+#. module: base_formation
+#: model_terms:ir.ui.view,arch_db:base_formation.formation_view_form
+msgid "Included formations"
+msgstr "Inclus ces formations"
+
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_formation____last_update
+#: model:ir.model.fields,field_description:base_formation.field_goal____last_update
+#: model:ir.model.fields,field_description:base_formation.field_goal_edit_wizard____last_update
+#: model:ir.model.fields,field_description:base_formation.field_goal_note____last_update
+#: model:ir.model.fields,field_description:base_formation.field_goal_note_template____last_update
+#: model:ir.model.fields,field_description:base_formation.field_goal_note_wizard____last_update
+#: model:ir.model.fields,field_description:base_formation.field_subject____last_update
 msgid "Last Modified on"
 msgstr "Dernière modification le"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_cycle__write_uid
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_discipline__write_uid
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_domain__write_uid
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_expectation__write_uid
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal__write_uid
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_definition__write_uid
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note__write_uid
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note_wizard__write_uid
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_thematic__write_uid
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_update_wizard__write_uid
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_formation__write_uid
+#: model:ir.model.fields,field_description:base_formation.field_goal__write_uid
+#: model:ir.model.fields,field_description:base_formation.field_goal_edit_wizard__write_uid
+#: model:ir.model.fields,field_description:base_formation.field_goal_note__write_uid
+#: model:ir.model.fields,field_description:base_formation.field_goal_note_template__write_uid
+#: model:ir.model.fields,field_description:base_formation.field_goal_note_wizard__write_uid
+#: model:ir.model.fields,field_description:base_formation.field_subject__write_uid
 msgid "Last Updated by"
 msgstr "Dernière mise à jour par"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_cycle__write_date
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_discipline__write_date
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_domain__write_date
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_expectation__write_date
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal__write_date
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_definition__write_date
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note__write_date
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note_wizard__write_date
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_thematic__write_date
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_update_wizard__write_date
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_formation__write_date
+#: model:ir.model.fields,field_description:base_formation.field_goal__write_date
+#: model:ir.model.fields,field_description:base_formation.field_goal_edit_wizard__write_date
+#: model:ir.model.fields,field_description:base_formation.field_goal_note__write_date
+#: model:ir.model.fields,field_description:base_formation.field_goal_note_template__write_date
+#: model:ir.model.fields,field_description:base_formation.field_goal_note_wizard__write_date
+#: model:ir.model.fields,field_description:base_formation.field_subject__write_date
 msgid "Last Updated on"
 msgstr "Dernière mise à jour le"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_definition__link_url
-msgid "Link Url"
-msgstr "Liens URL"
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_formation__child_ids
+msgid "List of children"
+msgstr "Liste des enfants"
 
-#. module: plan_etude_romand
-#: model:ir.model,name:plan_etude_romand.model_per_goal_note
-msgid "Manage goal note"
-msgstr "Configurer les notes d'objectif"
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_formation__parent_ids
+msgid "List of parents"
+msgstr "Liste des parents"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_res_partner__mentor_id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_res_users__mentor_id
-msgid "Mentor"
-msgstr "Mentor"
-
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_cycle__name
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_discipline__name
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_domain__name
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_expectation__name
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal__name
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_definition__name
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_thematic__name
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_formation__name
+#: model:ir.model.fields,field_description:base_formation.field_goal__name
+#: model:ir.model.fields,field_description:base_formation.field_goal_note_template__name
+#: model:ir.model.fields,field_description:base_formation.field_subject__name
 msgid "Name"
 msgstr "Nom"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note__note
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note_wizard__note
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_goal_note__note
+#: model:ir.model.fields,field_description:base_formation.field_goal_note_wizard__note
 msgid "Note"
 msgstr "Note"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal__notes_ids
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_goal_note_wizard__note_template
+msgid "Note template"
+msgstr "Modèle de note"
+
+#. module: base_formation
+#: model:ir.actions.act_window,name:base_formation.goal_note_templates_action
+#: model:ir.ui.menu,name:base_formation.goal_note_templates_menu
+msgid "Note templates"
+msgstr "Modèles de note"
+
+#. module: base_formation
+#: model:ir.model,name:base_formation.model_goal_note
+msgid "Note added to a goal to comment and/or validate"
+msgstr "Note ajoutée à un objectif afin de commenter et/ou valider"
+
+#. module: base_formation
+#: model:ir.actions.act_window,name:base_formation.goal_notes_action
+#: model:ir.model.fields,field_description:base_formation.field_goal__notes_ids
 msgid "Notes"
 msgstr "Notes"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_res_partner__count_total_goals
-#: model:ir.model.fields,field_description:plan_etude_romand.field_res_users__count_total_goals
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_res_partner__count_total_goals
+#: model:ir.model.fields,field_description:base_formation.field_res_users__count_total_goals
 msgid "Number of goals to achieve"
 msgstr "Nombre d'objectifs à atteindre"
 
-#. module: plan_etude_romand
-#: model:ir.ui.menu,name:plan_etude_romand.per_base_menu
-#: model:ir.ui.menu,name:plan_etude_romand.per_menu
-msgid "PER"
-msgstr "PER"
+#. module: base_formation
+#: code:addons/base_formation/models/goal_note.py:0
+#, python-format
+msgid "Only one note can valid the goal"
+msgstr "Une seule note doit valider un objectif"
 
-#. module: plan_etude_romand
-#: model:ir.model,name:plan_etude_romand.model_per_cycle
-msgid "PER cycle"
-msgstr "Cycle du PER"
-
-#. module: plan_etude_romand
-#: model:ir.actions.act_window,name:plan_etude_romand.per_discipline_action
-msgid "PER discipline action"
-msgstr "Configurer discipline du PER"
-
-#. module: plan_etude_romand
-#: model:ir.model,name:plan_etude_romand.model_per_expectation
-msgid "PER expectation"
-msgstr "Attentes du PER"
-
-#. module: plan_etude_romand
-#: model:ir.actions.act_window,name:plan_etude_romand.per_expectation_action
-msgid "PER expectation action"
-msgstr "Configurer les attentes fondamentales du PER"
-
-
-#. module: plan_etude_romand
-#: model:ir.model,name:plan_etude_romand.model_per_thematic
-msgid "PER thematic"
-msgstr "Thèmes du PER"
-
-#. module: plan_etude_romand
-#: model:ir.actions.act_window,name:plan_etude_romand.per_thematic_action
-msgid "PER thematic action"
-msgstr "Configurer les thèmes du PER"
-
-
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_cycle__per_id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_discipline__per_id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_domain__per_id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_expectation__per_id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_definition__per_id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_thematic__per_id
-msgid "Per"
-msgstr "PER"
-
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_definition__per_code
-msgid "Per Code"
-msgstr "Code PER"
-
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_res_partner__per_goal_ids
-#: model:ir.model.fields,field_description:plan_etude_romand.field_res_users__per_goal_ids
-msgid "Per Goal"
-msgstr "Objectif PER"
-
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_res_partner__per_parent_ids
-#: model:ir.model.fields,field_description:plan_etude_romand.field_res_users__per_parent_ids
-msgid "Per Parent"
-msgstr "Parent PER"
-
-#. module: plan_etude_romand
-#: model:ir.model,name:plan_etude_romand.model_per_discipline
-msgid "Per discipline"
-msgstr "Discipline PER"
-
-#. module: plan_etude_romand
-#: model:ir.actions.act_window,name:plan_etude_romand.per_goal_definition_action
-msgid "Per goal definition action"
-msgstr "Configurer la définition d'objectif PER"
-
-#. module: plan_etude_romand
-#: model_terms:ir.ui.view,arch_db:plan_etude_romand.view_parent_form
-msgid "School"
-msgstr "École"
-
-#. module: plan_etude_romand
-#: model:ir.actions.act_window,name:plan_etude_romand.per_cycle_action
-msgid "School Cycle"
-msgstr "Cycles scolaire"
-
-
-#. module: plan_etude_romand
-#: model:ir.ui.menu,name:plan_etude_romand.per_settings_menu
+#. module: base_formation
+#: model:ir.ui.menu,name:base_formation.formation_settings_menu
 msgid "Settings"
-msgstr "Configuration"
+msgstr "Paramètres"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal__state
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_goal__state
+#: model_terms:ir.ui.view,arch_db:base_formation.goal_view_search
 msgid "State"
 msgstr "État"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal__student_id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_res_partner__is_student
-#: model:ir.model.fields,field_description:plan_etude_romand.field_res_users__is_student
-#: model:ir.ui.menu,name:plan_etude_romand.per_student_menu
-#: model_terms:ir.ui.view,arch_db:plan_etude_romand.per_goal_view_search
-#: model:res.groups,name:plan_etude_romand.group_student
-msgid "Student"
-msgstr "Étudiants"
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_formation__subject_ids
+#: model:ir.model.fields,field_description:base_formation.field_goal__subject_id
+#: model:ir.model.fields,field_description:base_formation.field_goal_edit_wizard__subject_ids
+#: model_terms:ir.ui.view,arch_db:base_formation.goal_view_search
+msgid "Subject"
+msgstr "Sujet"
 
-#. module: plan_etude_romand
-#: model:ir.model,name:plan_etude_romand.model_res_partner
-msgid "Student information"
-msgstr "Informations étudiants"
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_goal__subject_name
+msgid "Subject name"
+msgstr "Nom du sujet"
 
-#. module: plan_etude_romand
-#: model:res.groups,name:plan_etude_romand.group_teacher
-msgid "Teacher"
-msgstr "Enseignant"
+#. module: base_formation
+#: model:ir.actions.act_window,name:base_formation.subjects_action
+#: model:ir.ui.menu,name:base_formation.subjects_menu
+#: model_terms:ir.ui.view,arch_db:base_formation.formation_view_form
+msgid "Subjects"
+msgstr "Sujets"
 
+#. module: base_formation
+#: model_terms:ir.ui.view,arch_db:base_formation.goal_view_search
+msgid "Success"
+msgstr "Succès"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_discipline__thematic_id
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_domain__thematic_ids
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_definition__thematic_ids
-#: model:ir.ui.menu,name:plan_etude_romand.per_thematic_menu
-msgid "Thematic"
-msgstr "Thèmes"
+#. module: base_formation
+#: model:ir.model,name:base_formation.model_goal_note_template
+msgid "Template for writing quickly a typical note"
+msgstr "Modèle pour rapidement écrire une note générique"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields.selection,name:plan_etude_romand.selection__per_goal__state__to_do
-msgid "To Do"
+#. module: base_formation
+#: model:ir.model.fields.selection,name:base_formation.selection__goal__state__to_do
+#: model_terms:ir.ui.view,arch_db:base_formation.goal_view_search
+msgid "To do"
 msgstr "À faire"
 
-#. module: plan_etude_romand
-#: model_terms:ir.ui.view,arch_db:plan_etude_romand.view_wizard_update_per
-msgid "Update"
-msgstr "Mettre à jour"
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_goal__trainee_id
+#: model:ir.model.fields,field_description:base_formation.field_goal_edit_wizard__trainee_ids
+#: model:ir.model.fields,field_description:base_formation.field_hr_employee__trainee_ids
+#: model:ir.model.fields,field_description:base_formation.field_res_partner__is_trainee
+#: model:ir.model.fields,field_description:base_formation.field_res_users__is_trainee
+#: model_terms:ir.ui.view,arch_db:base_formation.goal_view_search
+#: model_terms:ir.ui.view,arch_db:base_formation.view_res_partner_filter
+#: model:res.groups,name:base_formation.group_trainee
+msgid "Trainee"
+msgstr "Étudiant"
 
-#. module: plan_etude_romand
-#: model:ir.actions.act_window,name:plan_etude_romand.action_wizard_update_per
-#: model:ir.ui.menu,name:plan_etude_romand.per_update
-msgid "Update PER"
-msgstr "Mettre à jour le PER"
+#. module: base_formation
+#: model:ir.ui.menu,name:base_formation.trainees_menu
+msgid "Trainees"
+msgstr "Étudiants"
 
-#. module: plan_etude_romand
-#: model:ir.actions.server,name:plan_etude_romand.update_goals
-msgid "Update student goals"
-msgstr "Mettre à jour objectif étudiant"
+#. module: base_formation
+#: model:hr.job,name:base_formation.job_trainer
+#: model:ir.model.fields,field_description:base_formation.field_res_partner__trainer_id
+#: model:ir.model.fields,field_description:base_formation.field_res_users__trainer_id
+#: model:res.groups,name:base_formation.group_trainer
+msgid "Trainer"
+msgstr "Enseignant"
 
-#. module: plan_etude_romand
-#: model:ir.model.fields,field_description:plan_etude_romand.field_per_goal_note__valid_goal
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_goal_note__valid_goal
 msgid "Valid Goal"
-msgstr "Valider l'objectif"
+msgstr "Objectif valide"
 
-#. module: plan_etude_romand
-#: model:ir.model,name:plan_etude_romand.model_per_goal_note_wizard
-msgid "Wizard to add note"
-msgstr "Utilitaire d'ajout de note"
+#. module: base_formation
+#: model_terms:ir.ui.view,arch_db:base_formation.goal_edit_wizard_form
+msgid "Validate"
+msgstr "Valider"
 
-#. module: plan_etude_romand
-#: model:ir.model,name:plan_etude_romand.model_per_update_wizard
-msgid "Wizard to update PER data"
-msgstr "Utilitaire de mise à jour des données PER"
+#. module: base_formation
+#: model:ir.model.fields,field_description:base_formation.field_goal__validation_date
+msgid "Validation Date"
+msgstr "Date de validation"
 
-#. module: plan_etude_romand
-#: model_terms:ir.ui.view,arch_db:plan_etude_romand.view_wizard_update_per
-msgid "You will update the data from the PER"
-msgstr "Vous allez mettre à jour les données à partir du PER"
+#. module: base_formation
+#: model:ir.model,name:base_formation.model_goal_edit_wizard
+msgid ""
+"Wizard to add selectable subjects to the list of goals of selectable "
+"trainees"
+msgstr ""
+"Éditeur pour ajouter une sélection de sujet à la liste d'objectifs "
+"d'une sélection d'étudiant"
 
-#. module: plan_etude_romand
-#: model_terms:ir.ui.view,arch_db:plan_etude_romand.per_cycle_view_form
-msgid "per_school_cycle"
-msgstr "per_Cycle_Scolaire"
+#. module: base_formation
+#: model:ir.model,name:base_formation.model_goal_note_wizard
+msgid "Wizard to create a new note"
+msgstr "Éditeur pour créer une nouvelle note"
