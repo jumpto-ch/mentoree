@@ -22,7 +22,7 @@ class Goal(models.Model):
         ('to_do', 'To do'),
         ('progress', 'In progress'),
         ('done', 'Done'),
-    ], default='to_do', compute="_compute_state", inverse='_inverse_state', store=True, translate=True)
+    ], default='to_do', compute="_compute_state", inverse='_inverse_state', store=True)
 
     trainee_id = fields.Many2one('res.partner')
 
